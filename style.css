@@ -26,6 +26,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+header nav{
+    display: none;
+}
 
 header.logo {
     position: relative;
@@ -157,4 +160,155 @@ header ul li a {
     height: 100%;
     background: #017143;
     clip-path: circle(600px at right 800px);
+} 
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header ul{
+        display: none;
+    }
+
+    .textBox {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .thumb {
+        display: flex;
+        justify-content: center;
+    }
+
+    .thumb li {
+        margin: 0 10px;
+    }
+
+    .sci {
+        display: flex;
+        justify-content: center;
+    }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    
+    header {
+        padding: 25px;
+        margin: 0 ;
+        position: absolute ;
+        border-bottom: 1px solid black;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+    
+      .menu-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+      }
+      
+      .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin-bottom: 5px;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .menu-toggle.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      
+      .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      
+      .menu {
+        position: fixed;
+        top: 0;
+        left: -200px;
+        width: 200px;
+        height: 100vh;
+        padding: 20px;
+        background-color: #c5e1a5;
+        transition: left 0.3s ease-in-out;
+        overflow-y: auto;
+      }
+      
+      .menu .open {
+        left: 0;
+      }
+      
+      .menu li {
+        margin-bottom: 20px;
+      }
+      
+      .menu li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+      }
+
+    header .logo img{
+        max-width: 50px ;
+    }
+
+    header ul{
+        display: none;
+    }
+
+    .circle{
+        width: 100%;
+        clip-path: circle(500px at right 800px);
+    }
+
+    .content{
+        
+        justify-content: center;
+    }
+
+    .content .textBox{
+        display: none;
+    }
+
+    .content .imgBox{
+        display: flex;
+        width: auto;
+        padding-bottom: 130px;
+        padding-left: 75px;
+    }
+
+    .content .imgBox img{
+        max-width: 250px;
+    }
+
+    .thumb {
+        display: flex ;
+        justify-content: center ;
+    }
+
+    .thumb li {
+        margin: 0 10px ;
+    }
+
+    .sci {
+        display: none;
+    }
+}
+

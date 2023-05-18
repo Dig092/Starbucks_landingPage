@@ -20,6 +20,19 @@
                 <li><a href="#">What's New</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
+            <nav>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </header>
         <div class="content">
             <div class="textBox">
@@ -45,11 +58,20 @@
     </section>
 
     <script type="text/javascript">
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('open');
+            menu.classList.toggle('open');
+        });
+
+
         function imgSlider(anything) {
             document.querySelector('.starbucks').src = anything;
         }
 
-        function changecircleColor(color){
+        function changecircleColor(color) {
             const circle = document.querySelector('.circle');
             circle.style.background = color;
         }
